@@ -47,12 +47,8 @@ for i in json_response:
         responseObject['presentation'] = names[1]
     else:
         responseObject['presenter'] = names[0]
-   
-    print("RESPONSE: ",responseObject)
-    print('\n')
     
     if count == len(json_response) -1:
-        print("Llegue")
         open("downData.json", 'a').write(json.dumps(responseObject) + "]" )
     else:
         open("downData.json", 'a').write(json.dumps(responseObject) + ",\n" )

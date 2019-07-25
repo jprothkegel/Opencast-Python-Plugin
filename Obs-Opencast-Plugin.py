@@ -47,7 +47,6 @@ def delete_video(video_id, url):
 def opencast_ingest( opUrl, metadataUrl, recordFolder, delete_url):
     notParsedMetadata = getMetadata(metadataUrl)
     notParsedMetadata['fields'][4]['value'] = notParsedMetadata['fields'][4]['value'].split(",")
-    notParsedMetadata['fields'][5]['value'] = notParsedMetadata['fields'][5]['value'].split(",")
     
     metadata = []
     metadata.append(notParsedMetadata)
